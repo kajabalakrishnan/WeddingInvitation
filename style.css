@@ -1,0 +1,501 @@
+/* ==========================================
+   WEDDING INVITATION V4
+   STYLE - PART 1
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#FFF9EC,#FFE8B5,#F5C65C);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+/* BACKGROUND */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    background:
+    radial-gradient(circle at top,#ffffff66 0%,transparent 60%),
+    linear-gradient(135deg,#FFF7E5,#F5D97C);
+
+}
+
+/* WELCOME PAGE */
+
+#welcome{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:1s;
+
+}
+
+.welcomeCard{
+
+    width:450px;
+
+    max-width:92%;
+
+    background:white;
+
+    border-radius:30px;
+
+    border:5px solid #D4AF37;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+.om{
+
+    font-size:45px;
+
+}
+
+.welcomeCard h3{
+
+    color:#B8860B;
+
+    letter-spacing:3px;
+
+    margin-top:10px;
+
+}
+
+.welcomeCard h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:72px;
+
+    color:#8B0000;
+
+}
+
+.heart{
+
+    font-size:34px;
+
+    margin:8px 0;
+
+    animation:beat 1s infinite;
+
+}
+
+.welcomeCard p{
+
+    margin:25px 0;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+#openInvitation{
+
+    border:none;
+
+    background:linear-gradient(45deg,#FFD700,#C89E2B);
+
+    color:white;
+
+    padding:15px 40px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+#openInvitation:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* MAIN INVITATION */
+
+#mainInvitation{
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:40px;
+
+}
+
+.invitationCard{
+
+    width:540px;
+
+    max-width:95%;
+
+    background:white;
+
+    border-radius:30px;
+
+    border:5px solid gold;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.invitationCard h4{
+
+    color:#B8860B;
+
+    letter-spacing:3px;
+
+}
+
+.invitationCard h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:72px;
+
+    color:#8B0000;
+
+}
+
+.love{
+
+    font-size:36px;
+
+    color:crimson;
+
+    margin:10px 0;
+
+}
+
+.quote{
+
+    margin:25px 0;
+
+    color:#666;
+
+    font-style:italic;
+
+}
+
+/* SCRATCH CARD */
+
+.scratchArea{
+
+    position:relative;
+
+    width:340px;
+
+    height:200px;
+
+    margin:30px auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:3px solid gold;
+
+}
+
+.details{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF8DC;
+
+    z-index:1;
+
+}
+
+.details h2{
+
+    color:#B8860B;
+
+    margin-bottom:12px;
+
+}
+
+.details p{
+
+    color:#8B0000;
+
+    margin:6px;
+
+    font-weight:bold;
+
+}
+
+#scratchCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:10;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================
+   WEDDING INVITATION V4
+   STYLE - PART 2
+========================================== */
+
+/* COUNTDOWN */
+
+.countdown-box{
+    margin-top:30px;
+    background:#FFF8DC;
+    border:2px solid gold;
+    border-radius:20px;
+    padding:20px;
+}
+
+.countdown-box h2{
+    color:#B8860B;
+    margin-bottom:15px;
+    font-family:'Cinzel',serif;
+}
+
+#countdown{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.time-box{
+    background:white;
+    border:2px solid gold;
+    border-radius:15px;
+    padding:15px 10px;
+}
+
+.time-box span{
+    display:block;
+}
+
+.time-box .number{
+    font-size:28px;
+    font-weight:bold;
+    color:#8B0000;
+}
+
+.time-box .label{
+    font-size:13px;
+    color:#666;
+    margin-top:5px;
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.buttons button{
+
+    background:linear-gradient(45deg,#FFD700,#C89E2B);
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    padding:14px 28px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.buttons button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+/* HEART */
+
+@keyframes beat{
+
+    0%{transform:scale(1);}
+    50%{transform:scale(1.25);}
+    100%{transform:scale(1);}
+
+}
+
+/* FADE */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.invitationCard{
+
+    animation:fadeUp .9s ease;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .welcomeCard{
+
+        width:90%;
+        padding:30px;
+
+    }
+
+    .welcomeCard h1{
+
+        font-size:56px;
+
+    }
+
+    .invitationCard{
+
+        width:95%;
+        padding:25px;
+
+    }
+
+    .invitationCard h1{
+
+        font-size:58px;
+
+    }
+
+    .scratchArea{
+
+        width:100%;
+        max-width:300px;
+        height:180px;
+
+    }
+
+    #countdown{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+    }
+
+    .buttons button{
+
+        width:100%;
+
+    }
+
+}
+
+/* DESKTOP */
+
+@media(min-width:769px){
+
+    .buttons button{
+
+        min-width:170px;
+
+    }
+
+}
